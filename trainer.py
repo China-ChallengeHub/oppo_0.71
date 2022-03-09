@@ -56,8 +56,8 @@ NUM_SAMPLE_TRAIN = 500
 # Model construction
 model = AutoEncoder(feedback_bits=52, dropout=0.2)
 
-model.encoder.load_state_dict(torch.load('submit_pt/encoder_1.pth.tar')['state_dict'])
-model.decoder.load_state_dict(torch.load('submit_pt/generator_1.pth.tar')['state_dict'])
+# model.encoder.load_state_dict(torch.load('submit_pt/encoder_1.pth.tar')['state_dict'])
+# model.decoder.load_state_dict(torch.load('submit_pt/generator_1.pth.tar')['state_dict'])
 
 if use_single_gpu:
     model = model.cuda()
